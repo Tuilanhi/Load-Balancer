@@ -28,3 +28,13 @@ LoadBalancer
 
 main()
 - generate random ip helper function that random generates different ip
+- take in user's input for the number of servers and simulation time
+- initialize the LoadBalancer and vector webservers with number of servers
+- generate initial queue and create a Request and add it to LoadBalancer
+- print out starting queue size
+- set up a random number generator for adding in new Request
+- create a main simulation loop that loops through the simulation time
+    - calling LoadBalancer distributeRequest() and updateServer() 
+    - add a Request at random time 
+- print out ending queue size by calling LoadBalancer.getQueueSize()
+- print out task time range
