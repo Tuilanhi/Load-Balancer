@@ -19,12 +19,15 @@ LoadBalancer
 - constructor that initializes the vector WebServers with num of servers, and int current time
 - addRequest() accepts Request and add it to request queue
 - distributeRequest() distribute requests from the queue to the servers. It gives a request to the server when the server is not busy
+    - also update the minimum and maximum task time
 - addServer() adds a webserver instance to the servers vector
 - removeServer() removes a Webserver instance from the servers vector
 - updateServer() updates each server by calling their update method and increment the current time.
     - The size of the request queue is checked. If the queue size exceed num of Servers * 5, a new server is added.
     - If the queue size falls below number of Server * 2 and there are multiple servers, a server is removed.
 - getQueueSize() return the size of request queue
+- getMinTaskTime() return the minimum task time
+- getMaxTaskTime() return the maxinum task time
 
 main()
 - generate random ip helper function that random generates different ip
