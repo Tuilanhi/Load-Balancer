@@ -31,6 +31,7 @@ LoadBalancer
 
 main()
 - generate random ip helper function that random generates different ip
+- helper function to generate random clock cycle of request processing time
 - take in user's input for the number of servers and simulation time
 - initialize the LoadBalancer and vector webservers with number of servers
 - generate initial queue and create a Request and add it to LoadBalancer
