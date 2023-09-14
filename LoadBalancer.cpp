@@ -1,7 +1,7 @@
 #include "LoadBalancer.h"
 
 // constructor that initializes the vector WebServers with number of servers, and set int current time to 0
-LoadBalancer::LoadBalancer(int numOfServers) : webservers(numOfServers), currTime(0) {}
+LoadBalancer::LoadBalancer(int numOfServers) : webservers(numOfServers){}
 
 // Accepts Request and add it to the request queue
 void LoadBalancer::addRequest(const Request& request){
@@ -50,7 +50,6 @@ void LoadBalancer::updateServers()
     {
         server.update();
     }
-    currTime++;
 
     // The size of the request queue is checked. If the queue size exceed num of Servers * 5, a new server is added.
     // If the queue size falls below number of Server * 2 and there are multiple servers, a server is removed.

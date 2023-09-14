@@ -8,7 +8,6 @@ class LoadBalancer{
 private:
     std::queue<Request> requestQueue;
     std::vector<WebServer> webservers;
-    int currTime;
     int minTaskTime = std::numeric_limits<int>::max();
     int maxTaskTime = std::numeric_limits<int>::min();
 public:
