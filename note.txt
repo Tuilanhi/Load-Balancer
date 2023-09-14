@@ -1,0 +1,30 @@
+Request
+- contains a struct request
+    1. string ip in
+    2. string ip out
+    3. int processingTime
+
+WebServer
+- 3 private member variables: 
+    1. To tell if the server is currently processing a request (if it is not busy, it will ask for another Request)
+    2. To keep track of the remaining processing time for the current request
+    3. To store the current Request being processed
+- has a constructor that initializes busy to false and processing time left to 0
+- a getter function for busy to return whether or not it is busy
+- a void function that accepts a Request and set busy to true, then sets processing time left to processing time of Request
+- a void update function that decrement processing time left every time it is called. When processing time left is 0, busy is false.
+
+
+LoadBalancer
+- constructor that initializes the vector WebServers with num of servers, and int current time
+- addRequest() accepts Request and add it to request queue
+- distributeRequest() distribute requests from the queue to the servers. It gives a request to the server when the server is not busy
+- addServer() adds a webserver instance to the servers vector
+- removeServer() removes a Webserver instance from the servers vector
+- updateServer() updates each server by calling their update method and increment the current time.
+    - The size of the request queue is checked. If the queue size exceed num of Servers * 5, a new server is added.
+    - If the queue size falls below number of Server * 2 and there are multiple servers, a server is removed.
+- getQueueSize() return the size of request queue
+
+main()
+- generate random ip helper function that random generates different ip
