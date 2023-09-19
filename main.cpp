@@ -58,7 +58,7 @@ int main()
     // Set up a random number generator for adding new requests
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<> dis(1, clockCycle);
+    uniform_int_distribution<> dis(50, 100);
 
     // Main simulation loop
     for(int currTime = 0; currTime < clockCycle; currTime++)
@@ -74,6 +74,7 @@ int main()
             request.ip_out = genRandomIP();
             request.processingTime = getRandomProcessingTime(3, 100);
             loadBalancer.addRequest(request);
+            // cout << "add new request" << endl;
         }
     }
 
