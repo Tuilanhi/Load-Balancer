@@ -1,16 +1,19 @@
-#include "WebServer.h"
-#include <iostream>
-
-using namespace std;
 /*
 * Create a WebServer class that will
 * 1. receive requests from the Load Balancer
 * 2. Process the requests
 * 3. Ask for another request
 */
-WebServer::WebServer() : isBusy(false), processingTimeLeft(0) {} // Constructor to initialize all private members
+#include "WebServer.h"
+#include <iostream>
 
-bool WebServer::getBusy() const // Returns whether or not the server is busy
+using namespace std;
+
+// Constructor to initialize all private members
+WebServer::WebServer() : isBusy(false), processingTimeLeft(0) {}
+
+// Returns whether or not the server is busy
+bool WebServer::getBusy() const
 {
     return isBusy;
 }
@@ -21,7 +24,6 @@ void WebServer::processRequest(const Request& request) // Process the new reques
     {
         throw runtime_error("Server is currently busy");
     }
-
     isBusy = true;
     processingTimeLeft = request.processingTime;
     currRequest = request;

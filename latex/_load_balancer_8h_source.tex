@@ -1,0 +1,28 @@
+\doxysection{Load\+Balancer.\+h}
+\hypertarget{_load_balancer_8h_source}{}\label{_load_balancer_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}WebServer.h"{}}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_load_balancer}{LoadBalancer}}\{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ std::queue<Request>\ requestQueue;}
+\DoxyCodeLine{00010\ \ \ \ \ std::vector<WebServer>\ webservers;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ minTaskTime\ =\ std::numeric\_limits<int>::max();}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ maxTaskTime\ =\ std::numeric\_limits<int>::min();}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_load_balancer}{LoadBalancer}}(\textcolor{keywordtype}{int}\ numServers);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ addRequest(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_request}{Request}}\&\ request);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ distributeRequest();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ addServer();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ removeServer();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ updateServers();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ getQueueSize();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ getMinTaskTime()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ getMaxTaskTime()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ \};}
+
+\end{DoxyCode}
