@@ -61,6 +61,7 @@ int main()
     uniform_int_distribution<> dis(50, 100);
 
     // Main simulation loop
+    // Loop through the simulation time and exit when time is over
     for(int currTime = 0; currTime < clockCycle; currTime++)
     {
         loadBalancer.distributeRequest();
@@ -75,6 +76,7 @@ int main()
             request.processingTime = getRandomProcessingTime(3, 100);
             loadBalancer.addRequest(request);
             // cout << "add new request" << endl;
+            // cout << "queue size: " << loadBalancer.getQueueSize() << endl;
         }
     }
 
