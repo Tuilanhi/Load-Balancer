@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Load Balancer: WebServer.h Source File</title>
+<title>My Project: WebServer.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Load Balancer
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -79,22 +79,26 @@ $(document).ready(function() { init_codefold(0); });
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;Request.h&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="foldopen" id="foldopen00003" data-start="{" data-end="};">
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="class_web_server.html">    3</a></span><span class="keyword">class </span><a class="code hl_class" href="class_web_server.html">WebServer</a>{</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="keywordtype">bool</span> isBusy;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keywordtype">int</span> processingTimeLeft;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <a class="code hl_struct" href="struct_request.html">Request</a> currRequest;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_class" href="class_web_server.html">WebServer</a>();</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">bool</span> getBusy() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">void</span> processRequest(<span class="keyword">const</span> <a class="code hl_struct" href="struct_request.html">Request</a>&amp; request);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> update();</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>};</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_web_server.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_web_server.html">WebServer</a>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">bool</span> isBusy;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">int</span> processingTimeLeft;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_struct" href="struct_request.html">Request</a> currRequest;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_function" href="class_web_server.html#ad053f4e1808a3c10c7522d0dbbbc031a">WebServer</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_web_server.html#ae1d149c1903cd56b23d7924d095d9071">getBusy</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_web_server.html#a3c7a0293fd7557b10cda972c10047a70">processRequest</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_request.html">Request</a>&amp; request);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_web_server.html#a411c2251f15e22b2b5724a6fc26e5c57">update</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
 </div>
-<div class="ttc" id="aclass_web_server_html"><div class="ttname"><a href="class_web_server.html">WebServer</a></div><div class="ttdef"><b>Definition</b> WebServer.h:3</div></div>
-<div class="ttc" id="astruct_request_html"><div class="ttname"><a href="struct_request.html">Request</a></div><div class="ttdef"><b>Definition</b> Request.h:7</div></div>
+<div class="ttc" id="aclass_web_server_html"><div class="ttname"><a href="class_web_server.html">WebServer</a></div><div class="ttdoc">create a WebServer class that hold its private member variables and functions</div><div class="ttdef"><b>Definition</b> WebServer.h:11</div></div>
+<div class="ttc" id="aclass_web_server_html_a3c7a0293fd7557b10cda972c10047a70"><div class="ttname"><a href="class_web_server.html#a3c7a0293fd7557b10cda972c10047a70">WebServer::processRequest</a></div><div class="ttdeci">void processRequest(const Request &amp;request)</div><div class="ttdoc">process the request</div><div class="ttdef"><b>Definition</b> WebServer.cpp:31</div></div>
+<div class="ttc" id="aclass_web_server_html_a411c2251f15e22b2b5724a6fc26e5c57"><div class="ttname"><a href="class_web_server.html#a411c2251f15e22b2b5724a6fc26e5c57">WebServer::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">update the WebServer</div><div class="ttdef"><b>Definition</b> WebServer.cpp:49</div></div>
+<div class="ttc" id="aclass_web_server_html_ad053f4e1808a3c10c7522d0dbbbc031a"><div class="ttname"><a href="class_web_server.html#ad053f4e1808a3c10c7522d0dbbbc031a">WebServer::WebServer</a></div><div class="ttdeci">WebServer()</div><div class="ttdoc">construct the WebServer by calling its constructor</div><div class="ttdef"><b>Definition</b> WebServer.cpp:9</div></div>
+<div class="ttc" id="aclass_web_server_html_ae1d149c1903cd56b23d7924d095d9071"><div class="ttname"><a href="class_web_server.html#ae1d149c1903cd56b23d7924d095d9071">WebServer::getBusy</a></div><div class="ttdeci">bool getBusy() const</div><div class="ttdoc">Checks whether or not the WebServer is busy.</div><div class="ttdef"><b>Definition</b> WebServer.cpp:18</div></div>
+<div class="ttc" id="astruct_request_html"><div class="ttname"><a href="struct_request.html">Request</a></div><div class="ttdoc">create a struct request</div><div class="ttdef"><b>Definition</b> Request.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

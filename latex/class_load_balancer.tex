@@ -1,35 +1,169 @@
 \doxysection{Load\+Balancer Class Reference}
 \hypertarget{class_load_balancer}{}\label{class_load_balancer}\index{LoadBalancer@{LoadBalancer}}
+
+
+create a \doxylink{class_load_balancer}{Load\+Balancer} class that holds its member variables and functions  
+
+
+
+
+{\ttfamily \#include $<$Load\+Balancer.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_load_balancer_a6114560fd6fd431c75adeab2f0b230a9}\label{class_load_balancer_a6114560fd6fd431c75adeab2f0b230a9} 
 {\bfseries Load\+Balancer} (int num\+Servers)
-\item 
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_load_balancer}{Load\+Balancer} by calling its constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_load_balancer_abba1a1fcaa67e79e9aee94e903e1458c}{add\+Request}} (const \mbox{\hyperlink{struct_request}{Request}} \&request)
+\begin{DoxyCompactList}\small\item\em add request onto the queue of requests \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_load_balancer_a9c28b7a88af59014b4d7a9d68ea7d41f}{distribute\+Request}} ()
+\begin{DoxyCompactList}\small\item\em distribute request to a none busy \doxylink{class_web_server}{Web\+Server} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_load_balancer_a32f3f33a319622cf83b41cb9fcd09d3c}{add\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Add a \doxylink{class_web_server}{Web\+Server} onto a vector of Web\+Servers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_load_balancer_a2f77281d168914e6bbe1857a0cd84d25}{remove\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Remove a \doxylink{class_web_server}{Web\+Server} from a vector of Web\+Servers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_load_balancer_a85d1b84579b0c64d2fd3a8b6f25b30ba}{update\+Servers}} ()
+\begin{DoxyCompactList}\small\item\em Update the \doxylink{class_web_server}{Web\+Server} by processing the request. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_load_balancer_ac104e708c3d8a6984122d9a0df13b80b}{get\+Queue\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Get the current queue size. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_load_balancer_afec22503e16d36075469a1ed5208a5fe}{get\+Min\+Task\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Get the minimum processing time for all requests. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_load_balancer_a0d8e8725b4c97d160f1c61db33534fa5}{get\+Max\+Task\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Get the maximum processing time for all requests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+create a \doxylink{class_load_balancer}{Load\+Balancer} class that holds its member variables and functions 
+
+Construct a \doxylink{class_load_balancer}{Load\+Balancer} object 
+
+\doxysubsection{Member Function Documentation}
 \Hypertarget{class_load_balancer_abba1a1fcaa67e79e9aee94e903e1458c}\label{class_load_balancer_abba1a1fcaa67e79e9aee94e903e1458c} 
-void {\bfseries add\+Request} (const \mbox{\hyperlink{struct_request}{Request}} \&request)
-\item 
-\Hypertarget{class_load_balancer_a9c28b7a88af59014b4d7a9d68ea7d41f}\label{class_load_balancer_a9c28b7a88af59014b4d7a9d68ea7d41f} 
-void {\bfseries distribute\+Request} ()
-\item 
+\index{LoadBalancer@{LoadBalancer}!addRequest@{addRequest}}
+\index{addRequest@{addRequest}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{addRequest()}{addRequest()}}
+{\footnotesize\ttfamily void Load\+Balancer\+::add\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_request}{Request}} \&}]{request }\end{DoxyParamCaption})}
+
+
+
+add request onto the queue of requests 
+
+This function takes in the current request and push it into a queue of requests
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & the current request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 \Hypertarget{class_load_balancer_a32f3f33a319622cf83b41cb9fcd09d3c}\label{class_load_balancer_a32f3f33a319622cf83b41cb9fcd09d3c} 
-void {\bfseries add\+Server} ()
-\item 
-\Hypertarget{class_load_balancer_a2f77281d168914e6bbe1857a0cd84d25}\label{class_load_balancer_a2f77281d168914e6bbe1857a0cd84d25} 
-void {\bfseries remove\+Server} ()
-\item 
-\Hypertarget{class_load_balancer_a85d1b84579b0c64d2fd3a8b6f25b30ba}\label{class_load_balancer_a85d1b84579b0c64d2fd3a8b6f25b30ba} 
-void {\bfseries update\+Servers} ()
-\item 
-\Hypertarget{class_load_balancer_ac104e708c3d8a6984122d9a0df13b80b}\label{class_load_balancer_ac104e708c3d8a6984122d9a0df13b80b} 
-int {\bfseries get\+Queue\+Size} ()
-\item 
-\Hypertarget{class_load_balancer_afec22503e16d36075469a1ed5208a5fe}\label{class_load_balancer_afec22503e16d36075469a1ed5208a5fe} 
-int {\bfseries get\+Min\+Task\+Time} () const
-\item 
+\index{LoadBalancer@{LoadBalancer}!addServer@{addServer}}
+\index{addServer@{addServer}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{addServer()}{addServer()}}
+{\footnotesize\ttfamily void Load\+Balancer\+::add\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Add a \doxylink{class_web_server}{Web\+Server} onto a vector of Web\+Servers. 
+
+This function push back a new \doxylink{class_web_server}{Web\+Server} onto a vector of Web\+Servers
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{class_load_balancer_a9c28b7a88af59014b4d7a9d68ea7d41f}\label{class_load_balancer_a9c28b7a88af59014b4d7a9d68ea7d41f} 
+\index{LoadBalancer@{LoadBalancer}!distributeRequest@{distributeRequest}}
+\index{distributeRequest@{distributeRequest}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{distributeRequest()}{distributeRequest()}}
+{\footnotesize\ttfamily void Load\+Balancer\+::distribute\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+distribute request to a none busy \doxylink{class_web_server}{Web\+Server} 
+
+This function checks if a \doxylink{class_web_server}{Web\+Server} is empty or not and start distributing request to a server and update the min and max time takes to process the request
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 \Hypertarget{class_load_balancer_a0d8e8725b4c97d160f1c61db33534fa5}\label{class_load_balancer_a0d8e8725b4c97d160f1c61db33534fa5} 
-int {\bfseries get\+Max\+Task\+Time} () const
-\end{DoxyCompactItemize}
+\index{LoadBalancer@{LoadBalancer}!getMaxTaskTime@{getMaxTaskTime}}
+\index{getMaxTaskTime@{getMaxTaskTime}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{getMaxTaskTime()}{getMaxTaskTime()}}
+{\footnotesize\ttfamily int Load\+Balancer\+::get\+Max\+Task\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the maximum processing time for all requests. 
+
+This function returns the maximum amount of time take to process a request
+
+\begin{DoxyReturn}{Returns}
+The maximum processing time 
+\end{DoxyReturn}
+\Hypertarget{class_load_balancer_afec22503e16d36075469a1ed5208a5fe}\label{class_load_balancer_afec22503e16d36075469a1ed5208a5fe} 
+\index{LoadBalancer@{LoadBalancer}!getMinTaskTime@{getMinTaskTime}}
+\index{getMinTaskTime@{getMinTaskTime}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{getMinTaskTime()}{getMinTaskTime()}}
+{\footnotesize\ttfamily int Load\+Balancer\+::get\+Min\+Task\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the minimum processing time for all requests. 
+
+This function returns the minimum amount of time take to process a request
+
+\begin{DoxyReturn}{Returns}
+The minimum processing time 
+\end{DoxyReturn}
+\Hypertarget{class_load_balancer_ac104e708c3d8a6984122d9a0df13b80b}\label{class_load_balancer_ac104e708c3d8a6984122d9a0df13b80b} 
+\index{LoadBalancer@{LoadBalancer}!getQueueSize@{getQueueSize}}
+\index{getQueueSize@{getQueueSize}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{getQueueSize()}{getQueueSize()}}
+{\footnotesize\ttfamily int Load\+Balancer\+::get\+Queue\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the current queue size. 
+
+This function returns the current queue size
+
+\begin{DoxyReturn}{Returns}
+The request queue size 
+\end{DoxyReturn}
+\Hypertarget{class_load_balancer_a2f77281d168914e6bbe1857a0cd84d25}\label{class_load_balancer_a2f77281d168914e6bbe1857a0cd84d25} 
+\index{LoadBalancer@{LoadBalancer}!removeServer@{removeServer}}
+\index{removeServer@{removeServer}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{removeServer()}{removeServer()}}
+{\footnotesize\ttfamily void Load\+Balancer\+::remove\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove a \doxylink{class_web_server}{Web\+Server} from a vector of Web\+Servers. 
+
+This function removes a \doxylink{class_web_server}{Web\+Server} from a vector of Web\+Servers when called
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{class_load_balancer_a85d1b84579b0c64d2fd3a8b6f25b30ba}\label{class_load_balancer_a85d1b84579b0c64d2fd3a8b6f25b30ba} 
+\index{LoadBalancer@{LoadBalancer}!updateServers@{updateServers}}
+\index{updateServers@{updateServers}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{updateServers()}{updateServers()}}
+{\footnotesize\ttfamily void Load\+Balancer\+::update\+Servers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the \doxylink{class_web_server}{Web\+Server} by processing the request. 
+
+This function calls the update() in the \doxylink{class_web_server}{Web\+Server} class to process and update the busy status of the current server for the next request It also adds or remove a \doxylink{class_web_server}{Web\+Server} depending on the busy the queue is.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -1,14 +1,30 @@
 #include "LoadBalancer.h"
 
-// constructor that initializes the vector WebServers with number of servers, and set int current time to 0
+/**
+ * \brief Construct the LoadBalancer by calling its constructor
+ */
 LoadBalancer::LoadBalancer(int numOfServers) : webservers(numOfServers){}
 
-// Accepts Request and add it to the request queue
+/**
+ * \brief add request onto the queue of requests
+ *
+ * This function takes in the current request and push it into a queue of requests
+ * 
+ * \param request the current request
+ * \return void
+ */
 void LoadBalancer::addRequest(const Request& request){
     requestQueue.push(request);
 }
 
-// distribute requests from the queue to the servers. It gives the request to the server when the server is not busy
+/**
+ * \brief distribute request to a none busy WebServer
+ *
+ * This function checks if a WebServer is empty or not and start distributing request to a server
+ * and update the min and max time takes to process the request
+ * 
+ * \return void
+ */
 void LoadBalancer::distributeRequest()
 {
     int i = 1;
@@ -32,13 +48,25 @@ void LoadBalancer::distributeRequest()
     }
 }
 
-// Adds a web server instance to the servers vector
+/**
+ * \brief Add a WebServer onto a vector of WebServers
+ *
+ * This function push back a new WebServer onto a vector of WebServers
+ * 
+ * \return void
+ */
 void LoadBalancer::addServer()
 {
     webservers.push_back(WebServer());
 }
 
-// Removes a webserver instance from the servers vector
+/**
+ * \brief Remove a WebServer from a vector of WebServers
+ *
+ * This function removes a WebServer from a vector of WebServers when called
+ * 
+ * \return void
+ */
 void LoadBalancer::removeServer()
 {
     if(!webservers.empty())
@@ -47,7 +75,14 @@ void LoadBalancer::removeServer()
     }
 }
 
-// update each server by calling their update() and increment the current time
+/**
+ * \brief Update the WebServer by processing the request
+ *
+ * This function calls the update() in the WebServer class to process and update the busy status of the current server for the next request
+ * It also adds or remove a WebServer depending on the busy the queue is.
+ * 
+ * \return void
+ */
 void LoadBalancer::updateServers()
 {
     for(auto& server:webservers)
@@ -68,16 +103,37 @@ void LoadBalancer::updateServers()
     }
 }
 
+/**
+ * \brief Get the current queue size
+ *
+ * This function returns the current queue size 
+ * 
+ * \return The request queue size
+ */
 int LoadBalancer::getQueueSize() // Return the size of the current Request queue
 {
     return requestQueue.size();
 }
 
+/**
+ * \brief Get the minimum processing time for all requests
+ *
+ * This function returns the minimum amount of time take to process a request
+ * 
+ * \return The minimum processing time
+ */
 int LoadBalancer::getMinTaskTime() const // Return minimum task time
 { 
     return minTaskTime;
 }
 
+/**
+ * \brief Get the maximum processing time for all requests
+ *
+ * This function returns the maximum amount of time take to process a request
+ * 
+ * \return The maximum processing time
+ */
 int LoadBalancer::getMaxTaskTime() const // Return the maximum task time
 {
     return maxTaskTime;

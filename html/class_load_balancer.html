@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Load Balancer: LoadBalancer Class Reference</title>
+<title>My Project: LoadBalancer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Load Balancer
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -75,37 +75,222 @@ $(function() {
   <div class="headertitle"><div class="title">LoadBalancer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>create a <a class="el" href="class_load_balancer.html" title="create a LoadBalancer class that holds its member variables and functions">LoadBalancer</a> class that holds its member variables and functions  
+ <a href="class_load_balancer.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_load_balancer_8h_source.html">LoadBalancer.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6114560fd6fd431c75adeab2f0b230a9" id="r_a6114560fd6fd431c75adeab2f0b230a9"><td class="memItemLeft" align="right" valign="top"><a id="a6114560fd6fd431c75adeab2f0b230a9" name="a6114560fd6fd431c75adeab2f0b230a9"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>LoadBalancer</b> (int numServers)</td></tr>
+<tr class="memdesc:a6114560fd6fd431c75adeab2f0b230a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the <a class="el" href="class_load_balancer.html" title="create a LoadBalancer class that holds its member variables and functions">LoadBalancer</a> by calling its constructor. <br /></td></tr>
 <tr class="separator:a6114560fd6fd431c75adeab2f0b230a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abba1a1fcaa67e79e9aee94e903e1458c" id="r_abba1a1fcaa67e79e9aee94e903e1458c"><td class="memItemLeft" align="right" valign="top"><a id="abba1a1fcaa67e79e9aee94e903e1458c" name="abba1a1fcaa67e79e9aee94e903e1458c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addRequest</b> (const <a class="el" href="struct_request.html">Request</a> &amp;request)</td></tr>
+<tr class="memitem:abba1a1fcaa67e79e9aee94e903e1458c" id="r_abba1a1fcaa67e79e9aee94e903e1458c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_load_balancer.html#abba1a1fcaa67e79e9aee94e903e1458c">addRequest</a> (const <a class="el" href="struct_request.html">Request</a> &amp;request)</td></tr>
+<tr class="memdesc:abba1a1fcaa67e79e9aee94e903e1458c"><td class="mdescLeft">&#160;</td><td class="mdescRight">add request onto the queue of requests  <br /></td></tr>
 <tr class="separator:abba1a1fcaa67e79e9aee94e903e1458c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c28b7a88af59014b4d7a9d68ea7d41f" id="r_a9c28b7a88af59014b4d7a9d68ea7d41f"><td class="memItemLeft" align="right" valign="top"><a id="a9c28b7a88af59014b4d7a9d68ea7d41f" name="a9c28b7a88af59014b4d7a9d68ea7d41f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>distributeRequest</b> ()</td></tr>
+<tr class="memitem:a9c28b7a88af59014b4d7a9d68ea7d41f" id="r_a9c28b7a88af59014b4d7a9d68ea7d41f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_load_balancer.html#a9c28b7a88af59014b4d7a9d68ea7d41f">distributeRequest</a> ()</td></tr>
+<tr class="memdesc:a9c28b7a88af59014b4d7a9d68ea7d41f"><td class="mdescLeft">&#160;</td><td class="mdescRight">distribute request to a none busy <a class="el" href="class_web_server.html" title="create a WebServer class that hold its private member variables and functions">WebServer</a>  <br /></td></tr>
 <tr class="separator:a9c28b7a88af59014b4d7a9d68ea7d41f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32f3f33a319622cf83b41cb9fcd09d3c" id="r_a32f3f33a319622cf83b41cb9fcd09d3c"><td class="memItemLeft" align="right" valign="top"><a id="a32f3f33a319622cf83b41cb9fcd09d3c" name="a32f3f33a319622cf83b41cb9fcd09d3c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addServer</b> ()</td></tr>
+<tr class="memitem:a32f3f33a319622cf83b41cb9fcd09d3c" id="r_a32f3f33a319622cf83b41cb9fcd09d3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_load_balancer.html#a32f3f33a319622cf83b41cb9fcd09d3c">addServer</a> ()</td></tr>
+<tr class="memdesc:a32f3f33a319622cf83b41cb9fcd09d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a <a class="el" href="class_web_server.html" title="create a WebServer class that hold its private member variables and functions">WebServer</a> onto a vector of WebServers.  <br /></td></tr>
 <tr class="separator:a32f3f33a319622cf83b41cb9fcd09d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f77281d168914e6bbe1857a0cd84d25" id="r_a2f77281d168914e6bbe1857a0cd84d25"><td class="memItemLeft" align="right" valign="top"><a id="a2f77281d168914e6bbe1857a0cd84d25" name="a2f77281d168914e6bbe1857a0cd84d25"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>removeServer</b> ()</td></tr>
+<tr class="memitem:a2f77281d168914e6bbe1857a0cd84d25" id="r_a2f77281d168914e6bbe1857a0cd84d25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_load_balancer.html#a2f77281d168914e6bbe1857a0cd84d25">removeServer</a> ()</td></tr>
+<tr class="memdesc:a2f77281d168914e6bbe1857a0cd84d25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a <a class="el" href="class_web_server.html" title="create a WebServer class that hold its private member variables and functions">WebServer</a> from a vector of WebServers.  <br /></td></tr>
 <tr class="separator:a2f77281d168914e6bbe1857a0cd84d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85d1b84579b0c64d2fd3a8b6f25b30ba" id="r_a85d1b84579b0c64d2fd3a8b6f25b30ba"><td class="memItemLeft" align="right" valign="top"><a id="a85d1b84579b0c64d2fd3a8b6f25b30ba" name="a85d1b84579b0c64d2fd3a8b6f25b30ba"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>updateServers</b> ()</td></tr>
+<tr class="memitem:a85d1b84579b0c64d2fd3a8b6f25b30ba" id="r_a85d1b84579b0c64d2fd3a8b6f25b30ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_load_balancer.html#a85d1b84579b0c64d2fd3a8b6f25b30ba">updateServers</a> ()</td></tr>
+<tr class="memdesc:a85d1b84579b0c64d2fd3a8b6f25b30ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the <a class="el" href="class_web_server.html" title="create a WebServer class that hold its private member variables and functions">WebServer</a> by processing the request.  <br /></td></tr>
 <tr class="separator:a85d1b84579b0c64d2fd3a8b6f25b30ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac104e708c3d8a6984122d9a0df13b80b" id="r_ac104e708c3d8a6984122d9a0df13b80b"><td class="memItemLeft" align="right" valign="top"><a id="ac104e708c3d8a6984122d9a0df13b80b" name="ac104e708c3d8a6984122d9a0df13b80b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getQueueSize</b> ()</td></tr>
+<tr class="memitem:ac104e708c3d8a6984122d9a0df13b80b" id="r_ac104e708c3d8a6984122d9a0df13b80b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_load_balancer.html#ac104e708c3d8a6984122d9a0df13b80b">getQueueSize</a> ()</td></tr>
+<tr class="memdesc:ac104e708c3d8a6984122d9a0df13b80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current queue size.  <br /></td></tr>
 <tr class="separator:ac104e708c3d8a6984122d9a0df13b80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afec22503e16d36075469a1ed5208a5fe" id="r_afec22503e16d36075469a1ed5208a5fe"><td class="memItemLeft" align="right" valign="top"><a id="afec22503e16d36075469a1ed5208a5fe" name="afec22503e16d36075469a1ed5208a5fe"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getMinTaskTime</b> () const</td></tr>
+<tr class="memitem:afec22503e16d36075469a1ed5208a5fe" id="r_afec22503e16d36075469a1ed5208a5fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_load_balancer.html#afec22503e16d36075469a1ed5208a5fe">getMinTaskTime</a> () const</td></tr>
+<tr class="memdesc:afec22503e16d36075469a1ed5208a5fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the minimum processing time for all requests.  <br /></td></tr>
 <tr class="separator:afec22503e16d36075469a1ed5208a5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d8e8725b4c97d160f1c61db33534fa5" id="r_a0d8e8725b4c97d160f1c61db33534fa5"><td class="memItemLeft" align="right" valign="top"><a id="a0d8e8725b4c97d160f1c61db33534fa5" name="a0d8e8725b4c97d160f1c61db33534fa5"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getMaxTaskTime</b> () const</td></tr>
+<tr class="memitem:a0d8e8725b4c97d160f1c61db33534fa5" id="r_a0d8e8725b4c97d160f1c61db33534fa5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_load_balancer.html#a0d8e8725b4c97d160f1c61db33534fa5">getMaxTaskTime</a> () const</td></tr>
+<tr class="memdesc:a0d8e8725b4c97d160f1c61db33534fa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum processing time for all requests.  <br /></td></tr>
 <tr class="separator:a0d8e8725b4c97d160f1c61db33534fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>create a <a class="el" href="class_load_balancer.html" title="create a LoadBalancer class that holds its member variables and functions">LoadBalancer</a> class that holds its member variables and functions </p>
+<p>Construct a <a class="el" href="class_load_balancer.html" title="create a LoadBalancer class that holds its member variables and functions">LoadBalancer</a> object </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="abba1a1fcaa67e79e9aee94e903e1458c" name="abba1a1fcaa67e79e9aee94e903e1458c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abba1a1fcaa67e79e9aee94e903e1458c">&#9670;&#160;</a></span>addRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LoadBalancer::addRequest </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_request.html">Request</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>add request onto the queue of requests </p>
+<p>This function takes in the current request and push it into a queue of requests</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>the current request </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a32f3f33a319622cf83b41cb9fcd09d3c" name="a32f3f33a319622cf83b41cb9fcd09d3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32f3f33a319622cf83b41cb9fcd09d3c">&#9670;&#160;</a></span>addServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LoadBalancer::addServer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a <a class="el" href="class_web_server.html" title="create a WebServer class that hold its private member variables and functions">WebServer</a> onto a vector of WebServers. </p>
+<p>This function push back a new <a class="el" href="class_web_server.html" title="create a WebServer class that hold its private member variables and functions">WebServer</a> onto a vector of WebServers</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a9c28b7a88af59014b4d7a9d68ea7d41f" name="a9c28b7a88af59014b4d7a9d68ea7d41f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c28b7a88af59014b4d7a9d68ea7d41f">&#9670;&#160;</a></span>distributeRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LoadBalancer::distributeRequest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>distribute request to a none busy <a class="el" href="class_web_server.html" title="create a WebServer class that hold its private member variables and functions">WebServer</a> </p>
+<p>This function checks if a <a class="el" href="class_web_server.html" title="create a WebServer class that hold its private member variables and functions">WebServer</a> is empty or not and start distributing request to a server and update the min and max time takes to process the request</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a0d8e8725b4c97d160f1c61db33534fa5" name="a0d8e8725b4c97d160f1c61db33534fa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d8e8725b4c97d160f1c61db33534fa5">&#9670;&#160;</a></span>getMaxTaskTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LoadBalancer::getMaxTaskTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the maximum processing time for all requests. </p>
+<p>This function returns the maximum amount of time take to process a request</p>
+<dl class="section return"><dt>Returns</dt><dd>The maximum processing time </dd></dl>
+
+</div>
+</div>
+<a id="afec22503e16d36075469a1ed5208a5fe" name="afec22503e16d36075469a1ed5208a5fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afec22503e16d36075469a1ed5208a5fe">&#9670;&#160;</a></span>getMinTaskTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LoadBalancer::getMinTaskTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the minimum processing time for all requests. </p>
+<p>This function returns the minimum amount of time take to process a request</p>
+<dl class="section return"><dt>Returns</dt><dd>The minimum processing time </dd></dl>
+
+</div>
+</div>
+<a id="ac104e708c3d8a6984122d9a0df13b80b" name="ac104e708c3d8a6984122d9a0df13b80b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac104e708c3d8a6984122d9a0df13b80b">&#9670;&#160;</a></span>getQueueSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int LoadBalancer::getQueueSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current queue size. </p>
+<p>This function returns the current queue size</p>
+<dl class="section return"><dt>Returns</dt><dd>The request queue size </dd></dl>
+
+</div>
+</div>
+<a id="a2f77281d168914e6bbe1857a0cd84d25" name="a2f77281d168914e6bbe1857a0cd84d25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f77281d168914e6bbe1857a0cd84d25">&#9670;&#160;</a></span>removeServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LoadBalancer::removeServer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a <a class="el" href="class_web_server.html" title="create a WebServer class that hold its private member variables and functions">WebServer</a> from a vector of WebServers. </p>
+<p>This function removes a <a class="el" href="class_web_server.html" title="create a WebServer class that hold its private member variables and functions">WebServer</a> from a vector of WebServers when called</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a85d1b84579b0c64d2fd3a8b6f25b30ba" name="a85d1b84579b0c64d2fd3a8b6f25b30ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85d1b84579b0c64d2fd3a8b6f25b30ba">&#9670;&#160;</a></span>updateServers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LoadBalancer::updateServers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the <a class="el" href="class_web_server.html" title="create a WebServer class that hold its private member variables and functions">WebServer</a> by processing the request. </p>
+<p>This function calls the update() in the <a class="el" href="class_web_server.html" title="create a WebServer class that hold its private member variables and functions">WebServer</a> class to process and update the busy status of the current server for the next request It also adds or remove a <a class="el" href="class_web_server.html" title="create a WebServer class that hold its private member variables and functions">WebServer</a> depending on the busy the queue is.</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_load_balancer_8h_source.html">LoadBalancer.h</a></li>
 <li><b>LoadBalancer.cpp</b></li>

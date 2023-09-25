@@ -4,7 +4,13 @@
 
 using namespace std;
 
-// Helper function to generate random ip address to populate Request ip in and ip out in main()
+/**
+ * \brief generate random ip values
+ *
+ * This function returns a string of random values for ip_in and ip_out
+ * 
+ * \return The a string representing ip values
+ */
 string genRandomIP()
 {
     random_device rd; // produces random number 
@@ -19,7 +25,13 @@ string genRandomIP()
     return ip; // returns the random generated ip address
 }
 
-// Return the random time processing for Request
+/**
+ * \brief Get a random processing time between minimum and maximum values
+ *
+ * This function returns a random processing time for each request
+ * 
+ * \return The random time generated
+ */
 int getRandomProcessingTime(int min, int max)
 {
     random_device rd;

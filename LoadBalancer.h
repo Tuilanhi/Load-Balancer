@@ -3,7 +3,14 @@
 #include <queue>
 #include <iostream>
 
-
+/**
+ * @{ \name class LoadBalancer
+ */
+/**
+ * \brief create a LoadBalancer class that holds its member variables and functions
+ *
+ * Construct a LoadBalancer object
+ */
 class LoadBalancer{
 private:
     std::queue<Request> requestQueue;

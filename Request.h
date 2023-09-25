@@ -1,6 +1,11 @@
-/*
-* The request struct will contain and ip:in and ip:out and the processing time
-*/
+/**
+ * @{ \name Struct request
+ */
+/**
+ * \brief create a struct request
+ *
+ * These member variables represent the ip in, ip out and the processing time for a request
+ */
 #include <string.h>
 #include <iostream>
 
