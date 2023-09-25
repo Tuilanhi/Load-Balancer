@@ -91,7 +91,7 @@ void LoadBalancer::updateServers()
     }
 
     // The size of the request queue is checked. If the queue size exceed num of Servers * 4, a new server is added.
-    // If the queue size falls below number of Server * 2 and there are multiple servers, a server is removed.
+    // If the queue size falls below number of Server * 3 and there are multiple servers, a server is removed.
     int queueSize = requestQueue.size();
     if(queueSize > webservers.size() * 4)
     {
