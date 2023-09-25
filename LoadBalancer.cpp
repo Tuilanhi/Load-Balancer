@@ -97,7 +97,7 @@ void LoadBalancer::updateServers()
     {
         addServer();
     }
-    else if(queueSize < webservers.size() * 4 && webservers.size() > 1)
+    else if(queueSize < webservers.size() * 3 && webservers.size() > 1)
     {
         removeServer();
     }
