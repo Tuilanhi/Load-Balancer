@@ -40,6 +40,7 @@ int getRandomProcessingTime(int min, int max)
     return dis(gen);
 }
 
+
 int main()
 {
     int numOfServers, clockCycle, initialQueueSize;
