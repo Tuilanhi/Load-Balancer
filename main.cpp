@@ -55,6 +55,8 @@ int main()
     LoadBalancer loadBalancer(numOfServers);
     vector<WebServer> webservers(numOfServers);
 
+    ofstream myfile;
+
     // Generate initial queue (number of servers * 5), a full queue
     initialQueueSize = numOfServers * 5;
     for(int i = 0; i < initialQueueSize; i++)
@@ -62,16 +64,13 @@ int main()
         Request request;
         request.ip_in = genRandomIP();
         request.ip_out = genRandomIP();
-        request.processingTime = getRandomProcessingTime(3, 100);
+        request.processingTime = getRandomProcessingTime(3, 200);
         loadBalancer.addRequest(request);
     }
 
-    cout << "Starting queue size: " << loadBalancer.getQueueSize() << endl;
-
-    // Set up a random number generator for adding new requests
-    random_device rd;
-    mt19937 gen(rd());
-    uniform_int_distribution<> dis(50, 100);
+    myfile.open("result_log.txt", std::ofstream::trunc);
+    myfile << "Starting queue size: " << loadBalancer.getQueueSize() << endl;
+    myfile.close();
 
     // Main simulation loop
     // Loop through the simulation time and exit when time is over
@@ -80,22 +79,29 @@ int main()
         loadBalancer.distributeRequest();
         loadBalancer.updateServers();
 
+        int ran = getRandomProcessingTime(1, 50);
+        
         // Add new request at random times
-        if(currTime == dis(gen))
+        if(currTime % ran == 0)
         {
             Request request;
             request.ip_in = genRandomIP();
             request.ip_out = genRandomIP();
-            request.processingTime = getRandomProcessingTime(3, 100);
+            request.processingTime = getRandomProcessingTime(3, 200);
             loadBalancer.addRequest(request);
             // cout << "add new request" << endl;
             // cout << "queue size: " << loadBalancer.getQueueSize() << endl;
         }
     }
 
-    cout << "Ending queue size: " << loadBalancer.getQueueSize() << endl;
+    myfile.open("result_log.txt", std::ofstream::app);
 
-    cout << "Task time range: " << loadBalancer.getMinTaskTime() << " - " << loadBalancer.getMaxTaskTime() << endl;
+    myfile << "WebServer size: " << loadBalancer.getServerSize() << endl;
+    myfile << "Ending queue size: " << loadBalancer.getQueueSize() << endl;
+
+    myfile << "Task time range: " << loadBalancer.getMinTaskTime() << " - " << loadBalancer.getMaxTaskTime() << endl;
+
+    myfile.close();
 
     return 0;
 }

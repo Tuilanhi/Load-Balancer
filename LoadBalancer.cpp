@@ -27,14 +27,20 @@ void LoadBalancer::addRequest(const Request& request){
  */
 void LoadBalancer::distributeRequest()
 {
+    ofstream myfile;
+
     int i = 1;
     for(auto& server: webservers) // loop through all webserver in webservers vectors
     {
         if(!server.getBusy() && !requestQueue.empty()) // Check to make sure that the server is not busy and the queue is not empty
         {
             Request request = requestQueue.front();
-            std::cout << "Request ip_in: " << request.ip_in << " & Request ip_out: " << request.ip_out << 
-            " with processing time: " << request.processingTime << " is being processed by server " << i << std::endl;
+
+            myfile.open("result_log.txt", std::ofstream::app);
+            myfile << "Request ip_in: " << request.ip_in << " & Request ip_out: " << request.ip_out << 
+            " with processing time: " << request.processingTime << " is being processed by server " << i << endl;
+            myfile.close();
+
             server.processRequest(request); // process the first request pushed into the queue
             requestQueue.pop(); // pop the request from the queue of requests
 
@@ -137,4 +143,16 @@ int LoadBalancer::getMinTaskTime() const // Return minimum task time
 int LoadBalancer::getMaxTaskTime() const // Return the maximum task time
 {
     return maxTaskTime;
+}
+
+/**
+ * \brief Get the current webservers size
+ *
+ * This function returns the amount of servers running
+ * 
+ * \return The amount of servers running
+ */
+int LoadBalancer::getServerSize()
+{
+    return webservers.size();
 }

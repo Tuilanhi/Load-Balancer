@@ -5,23 +5,28 @@
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <queue>}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_load_balancer}{LoadBalancer}}\{}
-\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00016\ \ \ \ \ std::queue<Request>\ requestQueue;}
-\DoxyCodeLine{00017\ \ \ \ \ std::vector<WebServer>\ webservers;}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ minTaskTime\ =\ std::numeric\_limits<int>::max();}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ maxTaskTime\ =\ std::numeric\_limits<int>::min();}
-\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_load_balancer}{LoadBalancer}}(\textcolor{keywordtype}{int}\ numServers);}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_load_balancer_abba1a1fcaa67e79e9aee94e903e1458c}{addRequest}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_request}{Request}}\&\ request);}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_load_balancer_a9c28b7a88af59014b4d7a9d68ea7d41f}{distributeRequest}}();}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_load_balancer_a32f3f33a319622cf83b41cb9fcd09d3c}{addServer}}();}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_load_balancer_a2f77281d168914e6bbe1857a0cd84d25}{removeServer}}();}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_load_balancer_a85d1b84579b0c64d2fd3a8b6f25b30ba}{updateServers}}();}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_load_balancer_ac104e708c3d8a6984122d9a0df13b80b}{getQueueSize}}();}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_load_balancer_afec22503e16d36075469a1ed5208a5fe}{getMinTaskTime}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_load_balancer_a0d8e8725b4c97d160f1c61db33534fa5}{getMaxTaskTime}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_load_balancer}{LoadBalancer}}\{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ std::queue<Request>\ requestQueue;}
+\DoxyCodeLine{00021\ \ \ \ \ std::vector<WebServer>\ webservers;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ minTaskTime\ =\ std::numeric\_limits<int>::max();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ maxTaskTime\ =\ std::numeric\_limits<int>::min();}
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_load_balancer}{LoadBalancer}}(\textcolor{keywordtype}{int}\ numServers);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_load_balancer_abba1a1fcaa67e79e9aee94e903e1458c}{addRequest}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_request}{Request}}\&\ request);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_load_balancer_a9c28b7a88af59014b4d7a9d68ea7d41f}{distributeRequest}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_load_balancer_a32f3f33a319622cf83b41cb9fcd09d3c}{addServer}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_load_balancer_a2f77281d168914e6bbe1857a0cd84d25}{removeServer}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_load_balancer_a85d1b84579b0c64d2fd3a8b6f25b30ba}{updateServers}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_load_balancer_ac104e708c3d8a6984122d9a0df13b80b}{getQueueSize}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_load_balancer_afec22503e16d36075469a1ed5208a5fe}{getMinTaskTime}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_load_balancer_a0d8e8725b4c97d160f1c61db33534fa5}{getMaxTaskTime}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_load_balancer_adff37eae01f3a814701b2b2150ad1ed6}{getServerSize}}();}
+\DoxyCodeLine{00035\ \};}
 
 \end{DoxyCode}

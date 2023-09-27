@@ -30,7 +30,9 @@ int \mbox{\hyperlink{class_load_balancer_ac104e708c3d8a6984122d9a0df13b80b}{get\
 int \mbox{\hyperlink{class_load_balancer_afec22503e16d36075469a1ed5208a5fe}{get\+Min\+Task\+Time}} () const
 \begin{DoxyCompactList}\small\item\em Get the minimum processing time for all requests. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_load_balancer_a0d8e8725b4c97d160f1c61db33534fa5}{get\+Max\+Task\+Time}} () const
-\begin{DoxyCompactList}\small\item\em Get the maximum processing time for all requests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the maximum processing time for all requests. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_load_balancer_adff37eae01f3a814701b2b2150ad1ed6}{get\+Server\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Get the current webservers size. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -133,6 +135,21 @@ This function returns the current queue size
 
 \begin{DoxyReturn}{Returns}
 The request queue size 
+\end{DoxyReturn}
+\Hypertarget{class_load_balancer_adff37eae01f3a814701b2b2150ad1ed6}\label{class_load_balancer_adff37eae01f3a814701b2b2150ad1ed6} 
+\index{LoadBalancer@{LoadBalancer}!getServerSize@{getServerSize}}
+\index{getServerSize@{getServerSize}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{getServerSize()}{getServerSize()}}
+{\footnotesize\ttfamily int Load\+Balancer\+::get\+Server\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the current webservers size. 
+
+This function returns the amount of servers running
+
+\begin{DoxyReturn}{Returns}
+The amount of servers running 
 \end{DoxyReturn}
 \Hypertarget{class_load_balancer_a2f77281d168914e6bbe1857a0cd84d25}\label{class_load_balancer_a2f77281d168914e6bbe1857a0cd84d25} 
 \index{LoadBalancer@{LoadBalancer}!removeServer@{removeServer}}

@@ -2,6 +2,10 @@
 #include <vector>
 #include <queue>
 #include <iostream>
+#include <iostream>
+#include <fstream>
+
+using namespace std;
 
 /**
  * @{ \name class LoadBalancer
@@ -27,4 +31,5 @@ public:
     int getQueueSize();
     int getMinTaskTime() const;
     int getMaxTaskTime() const;
+    int getServerSize();
 };
