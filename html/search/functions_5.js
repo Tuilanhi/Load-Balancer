@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['removeserver_0',['removeServer',['../class_load_balancer.html#a2f77281d168914e6bbe1857a0cd84d25',1,'LoadBalancer']]]
+  ['processrequest_0',['processRequest',['../class_web_server.html#a3c7a0293fd7557b10cda972c10047a70',1,'WebServer']]]
 ];

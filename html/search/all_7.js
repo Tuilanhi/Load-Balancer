@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['update_0',['update',['../class_web_server.html#a411c2251f15e22b2b5724a6fc26e5c57',1,'WebServer']]],
-  ['updateservers_1',['updateServers',['../class_load_balancer.html#a85d1b84579b0c64d2fd3a8b6f25b30ba',1,'LoadBalancer']]]
+  ['removeserver_0',['removeServer',['../class_load_balancer.html#a2f77281d168914e6bbe1857a0cd84d25',1,'LoadBalancer']]],
+  ['request_1',['Request',['../struct_request.html',1,'']]],
+  ['request_2eh_2',['Request.h',['../_request_8h.html',1,'']]]
 ];

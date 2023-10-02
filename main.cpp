@@ -40,7 +40,11 @@ int getRandomProcessingTime(int min, int max)
     return dis(gen);
 }
 
-
+/**
+ * \brief The main function which creates the request queue and calls the loadbalancer to process the request
+ * 
+ * \return 0
+ */
 int main()
 {
     int numOfServers, clockCycle, initialQueueSize;
