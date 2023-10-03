@@ -103,6 +103,9 @@ int main()
     myfile << "WebServer size: " << loadBalancer.getServerSize() << endl;
     myfile << "Ending queue size: " << loadBalancer.getQueueSize() << endl;
 
+    myfile << "Total processed requests: " << loadBalancer.getTotalProcessedRequests() << endl;
+    myfile << "Total discarded requests: " << loadBalancer.getTotalDiscardedRequests() << endl;
+
     myfile << "Task time range: " << loadBalancer.getMinTaskTime() << " - " << loadBalancer.getMaxTaskTime() << endl;
 
     myfile.close();

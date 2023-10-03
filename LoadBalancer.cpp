@@ -14,6 +14,10 @@ LoadBalancer::LoadBalancer(int numOfServers) : webservers(numOfServers){}
  * \return void
  */
 void LoadBalancer::addRequest(const Request& request){
+    if (requestQueue.size() >= MAX_QUEUE_SIZE) {
+        totalDiscardedRequests++; // Increment the total discarded requests
+        return;
+    }
     requestQueue.push(request);
 }
 
@@ -42,6 +46,7 @@ void LoadBalancer::distributeRequest()
             myfile.close();
 
             server.processRequest(request); // process the first request pushed into the queue
+            totalProcessedRequests++; // Increment the total processed requests
             requestQueue.pop(); // pop the request from the queue of requests
 
             int taskTime = request.processingTime;
@@ -64,6 +69,10 @@ void LoadBalancer::distributeRequest()
 void LoadBalancer::addServer()
 {
     webservers.push_back(WebServer());
+    ofstream myfile;
+    myfile.open("result_log.txt", std::ofstream::app);
+    myfile << "1 Server is being added" << endl; 
+    myfile.close();
 }
 
 /**
@@ -78,6 +87,10 @@ void LoadBalancer::removeServer()
     if(!webservers.empty())
     {
         webservers.pop_back();
+        ofstream myfile;
+        myfile.open("result_log.txt", std::ofstream::app);
+        myfile << "1 Server is being removed" << endl; 
+        myfile.close();
     }
 }
 
@@ -155,4 +168,26 @@ int LoadBalancer::getMaxTaskTime() const // Return the maximum task time
 int LoadBalancer::getServerSize()
 {
     return webservers.size();
+}
+
+/**
+ * \brief Get the total processed requests
+ *
+ * This function returns the amount of processed requests
+ * 
+ * \return the total amount of processed request
+ */
+int LoadBalancer::getTotalProcessedRequests() const {
+    return totalProcessedRequests;
+}
+
+/**
+ * \brief Get the total of rejected requests
+ *
+ * This function returns the amount of rejected requests
+ * 
+ * \return the total amount of rejected requests
+ */
+int LoadBalancer::getTotalDiscardedRequests() const {
+    return totalDiscardedRequests;
 }

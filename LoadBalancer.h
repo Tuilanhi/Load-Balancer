@@ -5,6 +5,8 @@
 #include <iostream>
 #include <fstream>
 
+#define MAX_QUEUE_SIZE 50
+
 using namespace std;
 
 /**
@@ -17,6 +19,8 @@ using namespace std;
  */
 class LoadBalancer{
 private:
+    int totalProcessedRequests = 0;
+    int totalDiscardedRequests = 0;
     std::queue<Request> requestQueue;
     std::vector<WebServer> webservers;
     int minTaskTime = std::numeric_limits<int>::max();
@@ -32,4 +36,6 @@ public:
     int getMinTaskTime() const;
     int getMaxTaskTime() const;
     int getServerSize();
+    int getTotalProcessedRequests() const;
+    int getTotalDiscardedRequests() const;
 };

@@ -31,7 +31,11 @@ int \mbox{\hyperlink{class_load_balancer_afec22503e16d36075469a1ed5208a5fe}{get\
 int \mbox{\hyperlink{class_load_balancer_a0d8e8725b4c97d160f1c61db33534fa5}{get\+Max\+Task\+Time}} () const
 \begin{DoxyCompactList}\small\item\em Get the maximum processing time for all requests. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_load_balancer_adff37eae01f3a814701b2b2150ad1ed6}{get\+Server\+Size}} ()
-\begin{DoxyCompactList}\small\item\em Get the current webservers size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the current webservers size. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_load_balancer_aff0e390c0b1066dcb43f908ce046d1b8}{get\+Total\+Processed\+Requests}} () const
+\begin{DoxyCompactList}\small\item\em Get the total processed requests. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_load_balancer_a4aeb2d5c88b35dd3abfc748d1a53c286}{get\+Total\+Discarded\+Requests}} () const
+\begin{DoxyCompactList}\small\item\em Get the total of rejected requests. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -162,6 +166,36 @@ This function returns the amount of servers running
 
 \begin{DoxyReturn}{Returns}
 The amount of servers running 
+\end{DoxyReturn}
+\Hypertarget{class_load_balancer_a4aeb2d5c88b35dd3abfc748d1a53c286}\label{class_load_balancer_a4aeb2d5c88b35dd3abfc748d1a53c286} 
+\index{LoadBalancer@{LoadBalancer}!getTotalDiscardedRequests@{getTotalDiscardedRequests}}
+\index{getTotalDiscardedRequests@{getTotalDiscardedRequests}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{getTotalDiscardedRequests()}{getTotalDiscardedRequests()}}
+{\footnotesize\ttfamily int Load\+Balancer\+::get\+Total\+Discarded\+Requests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the total of rejected requests. 
+
+This function returns the amount of rejected requests
+
+\begin{DoxyReturn}{Returns}
+the total amount of rejected requests 
+\end{DoxyReturn}
+\Hypertarget{class_load_balancer_aff0e390c0b1066dcb43f908ce046d1b8}\label{class_load_balancer_aff0e390c0b1066dcb43f908ce046d1b8} 
+\index{LoadBalancer@{LoadBalancer}!getTotalProcessedRequests@{getTotalProcessedRequests}}
+\index{getTotalProcessedRequests@{getTotalProcessedRequests}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{getTotalProcessedRequests()}{getTotalProcessedRequests()}}
+{\footnotesize\ttfamily int Load\+Balancer\+::get\+Total\+Processed\+Requests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the total processed requests. 
+
+This function returns the amount of processed requests
+
+\begin{DoxyReturn}{Returns}
+the total amount of processed request 
 \end{DoxyReturn}
 \Hypertarget{class_load_balancer_a2f77281d168914e6bbe1857a0cd84d25}\label{class_load_balancer_a2f77281d168914e6bbe1857a0cd84d25} 
 \index{LoadBalancer@{LoadBalancer}!removeServer@{removeServer}}

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['webserver_0',['webserver',['../class_web_server.html',1,'WebServer'],['../class_web_server.html#ad053f4e1808a3c10c7522d0dbbbc031a',1,'WebServer::WebServer()']]],
-  ['webserver_2ecpp_1',['WebServer.cpp',['../_web_server_8cpp.html',1,'']]],
-  ['webserver_2eh_2',['WebServer.h',['../_web_server_8h.html',1,'']]]
+  ['update_0',['update',['../class_web_server.html#a411c2251f15e22b2b5724a6fc26e5c57',1,'WebServer']]],
+  ['updateservers_1',['updateServers',['../class_load_balancer.html#a85d1b84579b0c64d2fd3a8b6f25b30ba',1,'LoadBalancer']]]
 ];
